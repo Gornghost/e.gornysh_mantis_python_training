@@ -1,3 +1,5 @@
+from model.project import Project
+
 class ProjectHelper:
 
     def __init__(self, app):
@@ -37,8 +39,12 @@ class ProjectHelper:
         wd = self.app.wd
         self.open_projects_page()
         self.project_list = []
-        for element in wd.find_elements_by_css_selector("span.group"):
-            text = element.text
-            id = element.find_element_by_name("selected[]").get_attribute("value")
-            self.group_cache.append(Group(name = text, id = id))
-        return list(self.group_cache)
+        projects = wd.find_elements_by_xpath("//a[contains(@href,'manage_proj_edit_page')]/../..")
+        for element in projects:
+            projects = element.find_elements_by_tag_name("td")
+            name = projects[0].find_element_by_tag_name("a").text.strip()
+            status = projects[1].text.strip()
+            view_status = projects[3].text.strip()
+            description = projects[4].text.strip()
+            self.project_list.append(Project(name=name, status=status, view_status=view_status, description=description))
+        return list(self.project_list)
