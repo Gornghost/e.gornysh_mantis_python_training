@@ -17,8 +17,10 @@ class ProjectHelper:
 
     def open_projects_page(self):
         wd = self.app.wd
-        wd.find_element_by_link_text("Manage").click()
-        wd.find_element_by_link_text("Manage Projects").click()
+        if not (wd.current_url.endswith("/manage_proj_page.php") and len(wd.find_elements_by_xpath(".//input[@value='Create New Project']")) > 0):
+            wd.find_element_by_link_text("Manage").click()
+            wd.find_element_by_link_text("Manage Projects").click()
+
 
     def fill_project_form(self, project):
         wd = self.app.wd
@@ -48,3 +50,18 @@ class ProjectHelper:
             description = projects[4].text.strip()
             self.project_list.append(Project(name=name, status=status, view_status=view_status, description=description))
         return list(self.project_list)
+
+    def delete_project_by_name(self, name):
+        self.open_projects_page()
+        self.open_project_by_name(name)
+        self.submit_project_deletion()
+        self.submit_project_deletion()
+        self.open_projects_page()
+
+    def submit_project_deletion(self):
+        wd = self.app.wd
+        wd.find_element_by_xpath(".//input[@value='Delete Project']").click()
+
+    def open_project_by_name(self, name):
+        wd = self.app.wd
+        wd.find_element_by_link_text("%s" % name).click()

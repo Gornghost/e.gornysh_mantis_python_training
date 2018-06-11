@@ -1,37 +1,37 @@
 [
   {
     "py/object": "model.project.Project",
-    "description": "descriptiongX6SfOZh3iREYvSdYt",
-    "name": "name06tvQX",
-    "status": "development",
-    "view_status": "private"
-  },
-  {
-    "py/object": "model.project.Project",
-    "description": "descriptiongwE8ANUNBZKvVQ",
-    "name": "name4ItqIT",
+    "description": "descriptionIVY7iWdU0nF55hWVGd",
+    "name": "nameonPir5eJ",
     "status": "release",
     "view_status": "private"
   },
   {
     "py/object": "model.project.Project",
-    "description": "descriptionLZE9tG8caBvbNc",
-    "name": "nameUjBG",
+    "description": "descriptionJEA0GAGakgrqjLrYAeDfY0gCmKRQsWd",
+    "name": "namee",
     "status": "stable",
     "view_status": "public"
   },
   {
     "py/object": "model.project.Project",
-    "description": "descriptionTRqkJTtoayUYeECsOxmFTgr7ihXtSPzA",
-    "name": "nameHZ",
-    "status": "release",
+    "description": "descriptionli9I3ZvO56wGeos9biJ1M0XxTGuj3E",
+    "name": "nameeVf",
+    "status": "stable",
     "view_status": "public"
   },
   {
     "py/object": "model.project.Project",
-    "description": "descriptiony04P5ubaqzXhjiVhSnT3SRHrV4Pasz7st9",
-    "name": "nameBEHSboOb",
-    "status": "development",
+    "description": "descriptionJytdBo42NnE6khjLZ1CVtHE",
+    "name": "nameH",
+    "status": "stable",
+    "view_status": "private"
+  },
+  {
+    "py/object": "model.project.Project",
+    "description": "descriptionjt0edZaWXE7frs2jG0a2FCdn6lC",
+    "name": "namejh6i11C3",
+    "status": "obsolete",
     "view_status": "public"
   }
 ]

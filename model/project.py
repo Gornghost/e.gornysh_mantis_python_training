@@ -11,3 +11,9 @@ class Project:
 
     def __eq__(self, other):
         return (self.name is None or other.name is None or self.name == other.name) and self.description == other.description
+
+    def __lt__(self, other):
+        return self.name < other.name
+
+    def by_name(self):
+        return self.name
